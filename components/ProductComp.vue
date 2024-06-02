@@ -32,7 +32,7 @@
             </NuxtLink>
             <div class="px-5 pb-5">
                 <span class="text-3xl font-bold text-gray-900 dark:text-white">{{ product.price }}</span>
-                <span v-else class="text-3xl font-bold text-gray-900 dark:text-white line-through">Original price: {{ product.price * 1.5 }}</span>
+                <span class="text-3xl font-bold text-gray-900 dark:text-white line-through">Original price: {{ product.price * 1.5 }}</span>
                 <NuxtLink :to="`product-${product.id}`">
                     <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">{{ product.title }}</h5>
                 </NuxtLink>
