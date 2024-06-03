@@ -5,7 +5,7 @@
 <template>
     <div class="grid grid-cols-4 gap-4">
         <div v-for="pro in products">
-            <PtoductComp :product = "pro" />
+            <ProductComp :product = "pro" />
         </div>
     </div>
 </template>
