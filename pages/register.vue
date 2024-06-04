@@ -42,7 +42,7 @@
         setTimeout(async () => {
             successMsg.value = null
             await navigateTo('/confirm')
-        }, 2000);
+        }, 1000);
     }
 
 </script>

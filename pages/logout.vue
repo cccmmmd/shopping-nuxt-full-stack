@@ -11,6 +11,7 @@
             errorMsg.value = error.message
         }
         successMsg.value = 'Hope to see you again soon ! Redirecting ...'
+        errorMsg.value = null
         setTimeout(async () => {
             successMsg.value = null
             await navigateTo('/')
