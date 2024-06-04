@@ -32,6 +32,9 @@
                 <img class="p-8 rounded-t-lg" :src="`${product.image}`" alt="product image" />
             </NuxtLink>
             <div class="px-5 pb-5 dark:text-white">
+                <NuxtLink class="block mb-3"  :to="`product-${product.id}`">
+                    <h5 class="text-2xl font-semibold tracking-tight text-blue-800 ">{{ product.title }}</h5>
+                </NuxtLink>
                 <div>USD$
                 <span class="text-3xl font-bold text-gray-900 dark:text-white">{{ product.price }}</span><br/>
                 <span class="text-gray-500">Original price: USD$
@@ -41,16 +44,14 @@
                    <h5> Rating: </h5>
                     <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800 ms-3">{{ getRandomRating() }}</span>
                 </div>
-                <NuxtLink :to="`product-${product.id}`">
-                    <h5 class="text-xl font-semibold tracking-tight text-blue-800 ">{{ product.title }}</h5>
-                </NuxtLink>
+               
                 <NuxtLink :to="`product-${product.id}`">
                 <p class="mb-3 text-gray-500 dark:text-gray-400 truncate">{{ product.description }}</p>
                 </NuxtLink>
                 
                 <div class="flex items-center justify-end">
                     <button @click="addToCart(product)" class="text-white bg-yellow-400 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <span v-if="alreadyInCart(cart, product)" class="text-xl font-bold  dark:text-white">Item Added</span>
+                        <span v-if="alreadyInCart(cart, product) && user" class="text-xl font-bold  dark:text-white">Item Added</span>
                         <span v-else class="text-xl font-bold  dark:text-white">Add to Cart</span>
                     </button>
                     
