@@ -18,7 +18,7 @@ export default defineEventHandler( async event => {
             }
         })
     } catch(error){
-        console.error(err)
+        console.error(error)
     } finally {
         await prisma.$disconnect()
     }
