@@ -18,7 +18,7 @@
 </script>
 
 <template>
-    <div class="p-8">
+    <div class="p-6">
         <div class="text-center mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900  dark:text-white">輸入想搜尋的產品名稱</div>
         <form @submit.prevent="searchFunc" class="max-w-md mx-auto mb-16">   
             <label for="default-search" class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white">Search</label>

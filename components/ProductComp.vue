@@ -20,7 +20,7 @@
         if(user.value) {
             cart.value.push(product)
         }else{
-            alert(" Please Login first !")
+            alert("請先登入！")
         }
     }
 </script>
@@ -35,10 +35,10 @@
                 <NuxtLink class="block mb-3"  :to="`product-${product.id}`">
                     <h5 class="text-2xl font-semibold tracking-tight text-blue-800 ">{{ product.title }}</h5>
                 </NuxtLink>
-                <div>USD$
-                <span class="text-3xl font-bold text-gray-900 dark:text-white">{{ product.price }}</span><br/>
-                <span class="text-gray-500">Original price: USD$
-                <span class="text-xl font-bold line-through"> {{ product.price * 1.5 }}</span></span> 
+                <div>USD
+                <span class="text-3xl font-bold text-gray-900 dark:text-white">${{ product.price }}</span><br/>
+                <span class="text-gray-500">Original price: USD
+                <span class="text-xl font-bold line-through"> ${{ product.price * 1.5 }}</span></span> 
             </div>
                 <div class="flex items-center mt-2.5 mb-5 dark:text-white">
                    <h5> Rating: </h5>
@@ -50,9 +50,11 @@
                 </NuxtLink>
                 
                 <div class="flex items-center justify-end">
-                    <button @click="addToCart(product)" class="text-white bg-yellow-400 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-                        <span v-if="alreadyInCart(cart, product) && user" class="text-xl font-bold  dark:text-white">Item Added</span>
-                        <span v-else class="text-xl font-bold  dark:text-white">Add to Cart</span>
+                    <button  v-if="alreadyInCart(cart, product) && user" @click="addToCart(product)" class="text-white bg-gray-400 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <span class="text-xl font-bold  dark:text-white">Item Added</span>
+                    </button>
+                    <button v-else @click="addToCart(product)" class="text-white bg-yellow-400 hover:bg-yellow-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
+                        <span class="text-xl font-bold  dark:text-white">Add to Cart</span>
                     </button>
                     
                 </div>
