@@ -24,8 +24,8 @@
         alert('謝謝您！目前網站只做到這，沒有後續串金流，將導回首頁.......')
 
         setTimeout( async() => {
-            cart.value = []
             await navigateTo('/')
+            cart.value = []
         },1000)
        
     }
@@ -69,7 +69,7 @@
                             ${{ pd.price }}
                         </td>
                         <td class="px-6 py-4">
-                           <button class="border p-2" @click="removeProduct(pd)">
+                           <button class="p-2" @click="removeProduct(pd)">
                            <Icon
                                 name="fa:remove"
                                 size="20"

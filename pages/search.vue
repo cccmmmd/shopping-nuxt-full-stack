@@ -13,7 +13,10 @@
         }
     })
     }
-   
+onMounted(()=>{
+    searcResults.value = null
+    searchWord.value = null
+})
 
 </script>
 
