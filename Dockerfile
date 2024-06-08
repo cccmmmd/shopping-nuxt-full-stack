@@ -11,4 +11,4 @@ RUN npx prisma generate && npm run build
 
 EXPOSE 3000
 
-CMD ["node", ".output/server/index.mjs"]
+CMD ["npm", "run", "preview"]
