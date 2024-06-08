@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: cccmmmdshoppingnuxtfullstack 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: cccmmmdshoppingnuxtfullstack
+  template:
+    metadata:
+      labels:
+        app: cccmmmdshoppingnuxtfullstack 
+    spec:
+      containers:
+        - name: cccmmmdshoppingnuxtfullstack 
+          image: shoppingcenter.azurecr.io/cccmmmdshoppingnuxtfullstack
+          ports:
+          - containerPort: 3000
