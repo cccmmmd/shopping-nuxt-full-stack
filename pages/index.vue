@@ -4,7 +4,7 @@ const { data: products } = await useFetch("/api/products");
 </script>
 
 <template>
-	<div class="px-6">
+	<div class="px-6 mt-14">
 		<div
 			class="text-center mb-8 text-4xl font-extrabold leading-none tracking-tight text-transparent bg-clip-text bg-gradient-to-r to-purple-800 from-red-500"
 		>

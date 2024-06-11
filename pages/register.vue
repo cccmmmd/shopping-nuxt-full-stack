@@ -48,7 +48,7 @@ const signUp = async () => {
 </script>
 
 <template>
-	<div>
+	<div class="mt-14">
 		<div
 			class="text-center mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
 		>

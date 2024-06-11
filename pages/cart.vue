@@ -31,7 +31,7 @@ const goToCheckout = async () => {
 </script>
 
 <template>
-	<div class="px-12">
+	<div class="px-12 mt-14">
 		<div class="relative overflow-x-auto min-h-64">
 			<table
 				class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400 mb-10"

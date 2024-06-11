@@ -20,7 +20,7 @@ onMounted(() => {
 </script>
 
 <template>
-	<div class="p-6">
+	<div class="p-6 mt-14">
 		<div
 			class="text-center mb-8 text-4xl font-extrabold leading-none tracking-tight text-gray-900 dark:text-white"
 		>

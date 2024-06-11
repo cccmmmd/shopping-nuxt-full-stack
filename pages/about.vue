@@ -57,7 +57,7 @@
 }
 main {
 	max-width: 800px;
-	margin: 0 auto 50px;
+	margin: 3.5rem auto 50px;
 	padding: 2rem;
 	background-color: white;
 	border-radius: 20px;

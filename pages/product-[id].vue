@@ -30,7 +30,7 @@ const addToCart = (product) => {
 </script>
 
 <template>
-	<div class="max-w-4xl mx-auto">
+	<div class="max-w-4xl mx-auto mt-14">
 		<Loading v-if="pending" />
 		<div v-else>
 			<div class="bg-white rounded-lg shadow dark:bg-gray-800 p-5">
